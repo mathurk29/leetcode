@@ -1,3 +1,4 @@
+# https://leetcode.com/problems/logger-rate-limiter/
 class Logger:
 
     def __init__(self):
