@@ -1,0 +1,35 @@
+
+from typing import Optional
+
+# Definition for singly-linked list.
+
+
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+
+
+class Solution:
+    def removeNthFromEnd(self, head: Optional[ListNode], n: int) -> Optional[ListNode]:
+        # base case
+        if head.next is None:
+            return None
+        temp = ListNode(next=head)
+        behind = temp
+        ahead = temp
+
+        # move ahead n steps
+        for i in range(n):
+            ahead = ahead.next
+
+        while(ahead.next):
+            behind = behind.next
+            ahead = ahead.next
+
+        mark = behind.next
+        behind.next = behind.next.next
+        del mark
+
+        # return head  # NOPE cz what if nth element is head!! so we always use temp.next
+        return temp.next
