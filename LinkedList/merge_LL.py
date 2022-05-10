@@ -15,7 +15,7 @@ class ListNode:
 class Solution:
     def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
 
-        # Step2:
+        # Step2: this is executed in the last of recursion
 
         if list1 is None:
             return list2
