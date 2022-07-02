@@ -1,0 +1,22 @@
+# https://leetcode.com/problems/two-sum/
+
+
+# single pass
+
+# Create empty hashable aux space having search O(1) and add elements of the input array on the traversal.
+
+# lets say num = [a,b,C1,d,e,f,C2,h,]  and C1 + C2 == target
+# when you reach C2, C1 would already be there in aux space and can be retrieved in O(1) by using eq: C1 = target - C2
+
+
+def twoSum(nums, target):
+    d = {}
+    for i, n in enumerate(nums):
+        m = target - n  # calculate what should be the compliment
+        if m in d:
+            return [d[m], i]
+        else:
+            d[n] = i
+
+
+twoSum([2, 7, 11, 15], 9)
