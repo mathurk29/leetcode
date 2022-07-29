@@ -86,7 +86,7 @@ class Solution:
                 v2 = l2.val
                 l2 = l2.next
             carry, val = divmod(v1+v2+carry, 10)
-            n.next = ListNode(val)
+            n.next = ListNode(val)  # Important
             n = n.next
         return root.next        # Important trick for LL!
 
