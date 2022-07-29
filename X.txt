@@ -1,0 +1,114 @@
+https://towardsdatascience.com/rest-api-the-architectural-constraints-fc4876b41e3d
+
+https://meshworld.in/rest-api-linkedin-skill-assessments-quizzes-with-answers/
+
+https://www.linkedin.com/skill-assessments/Object-Oriented%20Programming%20(OOP)/quiz-intro/
+
+https://www.linkedin.com/skill-assessments/Linux/quiz-intro/
+
+
+
+https://towardsdatascience.com/solid-coding-in-python-1281392a6a94
+
+quality gates - https://blog.bitsrc.io/8-practices-to-ensure-better-code-quality-fcd0c2197940
+
+
+https://google.github.io/styleguide/pyguide.html#s3.19-type-annotations
+
+https://blog.bitsrc.io/8-practices-to-ensure-better-code-quality-fcd0c2197940
+
+how to scale your web app - https://10clouds.com/blog/devops/how-to-successfully-scale-your-web-application/
+https://aws.amazon.com/blogs/architecture/scale-your-web-application-one-step-at-a-time/
+https://relevant.software/blog/guide-large-scale-web-application-development/
+
+
+
+what is code quality? and how do you maintain it?
+
+kaifee swagger recording
+how many api requ per sec are we getting?
+https://rndwiki-pro.its.hpecorp.net/display/~venkata-satyanarayana.sanku@hpe.com
+https://rndwiki-pro.its.hpecorp.net/display/issdcSDLC/Code+Review+and+API+Spec+Guidelines
+https://rndwiki-pro.its.hpecorp.net/display/~sachin.pargi@hpe.com
+
+check whehter we use unittest or pytest in our project
+example of team collaboration
+adaptibility to changes
+
+
+
+
+recent user story example - biggest contribution example
+pytest - revise rshravan
+what all silly things bring you down?
+
+mvc vs mvt  - you th8 t and v are analogies but they are not
+
+understand more about db - for hdl - understand what data should go where
+how to have multiple db - pros and cons - nosql is not only about reliability
+why use redis if es is fast
+
+understand celery 
+request - response cycle
+https://medium.com/swlh/creating-middlewares-with-python-flask-166bd03f2fd4
+async vs await
+acid but from better source not gfg
+https://developers.redhat.com/blog/2018/10/01/patterns-for-distributed-transactions-within-a-microservices-architecture#
+microservice tutorial
+diff b/w atomic and consistency
+locking in dbms
+multithreading and multiprocessing in python
+does nosql provide atomicity
+how to get atomicity amond microservice
+https://restfulapi.net/
+what is the format of response.
+write a flask main app yourself
+how to implement caching in rest apis
+does nosql support acid or can be made acid 
+revisit closure and decorator and write decorator
+request library python
+have you made any classes? 
+what are cloud native techs?
+Redis
+Elasticache
+ElasticSearch
+https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/
+0. Rohan Sharavn Notes
+1. REST API FAQ
+2. In-memory database
+3. Big O notations and others
+4. https://leetcode.com/discuss/study-guide/2163754/study-plan-75-questions-till-interview-ready
+
+5. https://www.youtube.com/watch?v=052VkKhIaQ4 Graph coloring by Abdul Bari
+
+
+
+6. Fair dist of cookies - https://leetcode.com/problems/fair-distribution-of-cookies/ 
+
+7. API Endpoints and resoruce and naming
+
+8. deploy flask to prod
+
+9. docker commands and revision
+
+10. docker build yourself and run strainer
+
+11. filter vs map vs reduce
+
+12. inheritance and super in python
+
+13. factorial python
+
+14. Decorators
+
+15. https://leetcode.com/problems/longest-palindromic-substring/ DP
+
+16. how to make api resilient
+
+17. https://leetcode.com/problems/duplicate-zeros/
+
+18. for loop enumerate
+
+19. sum twin element - commit to github
+
+20. 

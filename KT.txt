@@ -1,0 +1,88 @@
+why don't we do hld and lld for olive?
+what is the need for db cleanup?
+where do we store sppid
+passwd for https://703852431183.dkr.ecr.us-west-2.amazonaws.com/strainer-prs:1.3.0-2022.01.17-f5cd387 
+
+
+what does SWIT team do? what all phases of testing. Do they check with COM or what?
+we recently had GA - who all are consumers?  any incident of failure in prod - how are we logging it? will devops tell us or sre?
+what is QIT test report ?
+what is Strainer TOT.
+PAVO endpoint?
+what is PATCH bundle ? deepali and giri talking to take from venky for sep msb 4 octet version  - minibar not handling patch bundles	
+
+use of if not token_id:  in wrapper PRS
+
+how do we check of docker health?
+
+diff b/w 1.4.1.  vs 1.5.0
+which spec to use - dev / prod spec
+
+
+
+
+
+do we have public cloud or private cloud?  pvt cloud vs not cloud? managed pvt cloud? 
+cloud is about h/w s/w resources - what cloud is hpe giving - 
+
+
+
+pagination / filtering - do we do that?
+what is connexion and why we use it over flask
+use of redis? how, where
+loadtestapi
+various testing phases - FT/ MAT ....
+
+
+
+
+what is rtp
+type d comp
+installset
+gautham / shashi what do they work on - DEEPAK panambur
+where did you see pod utilization
+ci/cd pipeline
+
+
+how do we fix latency issues
+
+do we use caching? if yes  - where all?
+how to interact with aws? what all is reqd and how to learn?
+how do we make our application secure / cryptography?
+who has the responsibility to take 
+
+
+HPEInternalPublicRESTAPI in swagger.yaml
+humio link
+
+namespaces? - nfrapi
+
+diff b/w QA test / MAT / regression /  Staging / pre prod / prod /TOT / FT signoff /QIT
+what is recreate db / es cleanup on deploymet and push bundles? why 12+ hours to do it?
+what is pushing 1.4 on top of 1.5 - why several release branches? do we have more than one codebase in prod?
+what is SWIT sign off?
+what is dse and how we integrate it to olive?
+what part of strainer is reposerver?
+
+get_base_bundle_doc vs get_latest_base_bundle_doc
+
+out-of-band mechanisem?
+compliance?
+deviation?
+baseline?
+spp - hotfix - baseline - closest baseline?
+
+service pack vs bundle vs base_bundle vs baseline
+
+if hotfix is installed over some bundle - than do we still identify the bundle as baseline or hotfix?
+
+what we do after build?
+console output - gates
+loadtestapi
+uploaded to DTR
+
+
+
+
+
+use macro in line 159 if condition bundleId

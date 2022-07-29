@@ -1,0 +1,65 @@
+1. SPP was successful and I didn't see any roadmap for future. Mostly they were in talk for cloud native app.
+
+2. I talked to manager what next.
+
+3. what is one thing that we are doing that other people are not. nothing interested me then.
+
+4. then I talked to program mgmt and how can we improve. 
+
+5. we can have OS specific bundles for major releases 
+
+5. other env were not ready for it.
+
+6.. I approached my director veena - said that this is one thing? will it help our customers. she was happy - why not  - what do you need 
+
+7. i changed in spp - it was done. package mgrs worked on that. there was a cloud proj where changes need to be done and they were understaffed i requested the responsibilty 
+
+8. let me do the spyke - i learned that - took me about 1.5 months. and I implemented as well /
+
+9 . and moved to olive team
+
+
+
+
+Result - HPE is not dependent on the entire list of fw teams 
+
+
+
+
+
+
+
+______________________________________________________
+
+
+
+
+
+
+
+i proposed why not json - 
+
+
+
+
+The code was on SVN and transferred to Github.
+
+
+I studied the entire build process - lot of code was there which was not reqd - many was if else condition for scenarios which no longer existed.
+
+i removed them and started making new moduels for json - 
+
+worked with architects and designed what all metadata are mandatory.
+
+that designing part was extremely crucial and challengeing cz spp was base. impact analysis was imp  - i was a bit confused if it is right that i am not coding much - then asked mgr he said they are actually happy - and i got mentored with jeff nordin
+- 
+
+I cherish those days as SPP was when I learnt the most - I loved the complications of a big project - I recieved a lot of importance - that gave my pride - and most with jeff nordin
+
+
+
+
+
+
+
+
