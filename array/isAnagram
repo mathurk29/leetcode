@@ -1,0 +1,21 @@
+from collections import defaultdict
+
+
+class Solution:
+    def isAnagram(self, s: str, t: str) -> bool:
+        d = defaultdict(int)
+        for letter in s:
+            d[letter] += 1
+        letters = d.keys()
+        for letter in t:
+            if letter not in letters:
+                return False
+            d[letter] -= 1
+            if d[letter] < 0:
+                return False
+        return True
+
+sol = Solution()
+s = "anagram"
+t = "nagaram"
+sol.isAnagram(s,t)

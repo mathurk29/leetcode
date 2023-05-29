@@ -1,0 +1,40 @@
+from typing import List
+
+
+class Solution:
+    def twoSum(self, numbers: List[int], target: int) -> List[int]:
+        
+        for i, val in enumerate(numbers):
+            k = target - val
+            relative_loc_k = self.binarySearch(numbers[i+1:],k)
+            if relative_loc_k == -1:
+                continue
+            actual_loc_k = relative_loc_k + i + 1
+            return [i+1, actual_loc_k + 1]
+        
+        return "logic is wrong!! :("
+
+
+    def binarySearch(self, sub_list, k):
+        left = 0
+        right = len(sub_list) - 1
+        while left <= right:
+            mid = (left + right) // 2
+            guess = sub_list[mid]
+            if k == guess:
+                return mid
+            elif guess < k:
+                
+                left = mid + 1
+            else:
+                right = mid - 1
+        
+        return -1
+
+
+
+numbers = [2,7,11,15]
+target = 9
+
+sol = Solution()
+print(sol.twoSum(numbers,target))

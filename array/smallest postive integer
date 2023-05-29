@@ -1,0 +1,17 @@
+from typing import List
+
+
+class Solution:
+    def firstMissingPositive(self, nums: List[int]) -> int:
+        min = 1
+        max = len(nums) # result can't be > len(nums)
+        # +1 if positives are monotonically increasing 
+        aux = [0] * (len(nums) + 1) 
+        for idx, val in enumerate(nums):
+            if val < min or val > max: 
+                nums[idx] = 1 #not the answer
+            aux[val-1] = 1
+        for idx, val in enumerate(aux):
+            if val == 0:
+                return idx + 1
+            
