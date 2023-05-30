@@ -1,0 +1,21 @@
+
+syntax = "proto2";
+
+message Flat
+{
+    required uint32 attr1     = 1;
+    required uint32 attr2          = 2;
+}
+
+message NestedL1
+{
+    required uint32 nestedField     = 5;
+}
+
+
+message Nested
+{
+    repeated Flat rep = 3;
+    required NestedL1 flatAttr = 4;
+}
+
