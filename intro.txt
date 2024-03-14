@@ -19,16 +19,30 @@ SPP is comprehensive systems software and firmware update solution for Proliant 
 
 
 
-Olive is a software as a service(SaaS) solution, where the firmware update services are hosted in Amazon Web services(aws). Olive services are available to the user over internet and users can access the services using positano, oneview and iLO. Olive has two services data consumer service (DCS) and public RESTful services (PRS) to enable the firmware update through cloud. DCS receives bundle manifest and component location from another service ‘Download Manger’ and stores bundles details and component information into Elastic search. PRS provides a set of REST APIs to get the information from elasticsearch.
+Olive is a software as a service(SaaS) solution, where the firmware update services are hosted in Amazon Web services(aws). 
+Olive services are available to the user over internet and users can access the services using positano, oneview and iLO.
+Olive has two services data consumer service (DCS) and public RESTful services (PRS) to enable the firmware update through cloud. 
+DCS receives bundle manifest and component location from another service ‘Download Manger’ and stores bundles details and component information into Elastic search. 
+PRS provides a set of REST APIs to get the information from elasticsearch.
 
-Olive provides a set of APIs api/v1/bundles, /api/v1/compliance/calculate, /api/v1/bundles/details, /api/v1/installset/calculate to positano and oneview to perform the firmware update. /api/v1/bundles API is a GET method that provides list of bundles available in Olive database. This API helps the clients to show the information about released bundles, release notes, enhancements and important fixes available. Compliance API, /api/v1/compliance/calculate is a POST method that takes server inventory and bundle version as input and helps the clients to determine the baseline at which the server was. Using compliance API clients would determine how many upgrades are required to come to particular baseline that user has selected during the update. Bundles details API, /api/v1/bundles/details is a GET method that provides meta information about the components that are part of a bundle. Install set API, /api/v1/installset/calculate is POST method that takes server inventory and component meta information from bundle details API and calculates a set of applicable components for the server. This installset can be invoked directly on iLO to perform firmware update.
+Olive provides a set of APIs api/v1/bundles, /api/v1/compliance/calculate, /api/v1/bundles/details, /api/v1/installset/calculate to positano and oneview to perform the firmware update. 
+/api/v1/bundles API is a GET method that provides list of bundles available in Olive database. This API helps the clients to show the information about released bundles, release notes, enhancements and important fixes available. 
+Compliance API, /api/v1/compliance/calculate is a POST method that takes server inventory and bundle version as input and helps the clients to determine the baseline at which the server was. Using compliance API clients would determine how many upgrades are required to come to particular baseline that user has selected during the update. 
+Bundles details API, /api/v1/bundles/details is a GET method that provides meta information about the components that are part of a bundle. 
+Installset API, /api/v1/installset/calculate is POST method that takes server inventory and component meta information from bundle details API and calculates a set of applicable components for the server. This installset can be invoked directly on iLO to perform firmware update.
 
 
 
 
 
 
-Olive Cloud Development: Build new capabilities Design, develop and maintain SMTA movement before Olive GA.Post production or partner issue of Olive Catastrophic – 4 hrs, Critical – 48 hours and Serious – 5 days.Ensure code coverage of 70% and above by adopting robust unit test cases.Ensure zero regression due to backwards combability with new SMTA movement release.Ensure Zero MAT failure.  Enhance olive solution to make it more resilient and secure Development of new features by keeping security as an important aspect.Deliver secure and independent microservices with 0 regression and more than 70% of code coverageDevelopment of features with 0 critical errors and 0 regression errors
+Olive Cloud Development: Build new capabilities Design, develop and maintain SMTA movement before Olive GA.Post production or partner issue of Olive Catastrophic – 4 hrs, Critical – 48 hours and Serious – 5 days.
+Ensure code coverage of 70% and above by adopting robust unit test cases.
+Ensure zero regression due to backwards combability with new SMTA movement release.
+Ensure Zero MAT failure.
+Enhance olive solution to make it more resilient and secure Development of new features by keeping security as an important aspect.
+Deliver secure and independent microservices with 0 regression and more than 70% of code coverage.
+1 regression errors
 
 
 
