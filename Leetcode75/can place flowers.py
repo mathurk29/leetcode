@@ -2,6 +2,7 @@
 
 from typing import List
 
+
 class Solution:
     def canPlaceFlowers(self, flowerbed: List[int], n: int) -> bool:
         if n == 0:
@@ -17,4 +18,3 @@ class Solution:
                     return True
             curr += 1
         return False
-

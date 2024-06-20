@@ -16,17 +16,14 @@ class Circle:
             self._radius = value
         else:
             raise ValueError("Radius must be non-negative.")
-    
+
     @staticmethod
     def pi():
-        return math.pi 
+        return math.pi
 
     @property
     def area(self):
-        return self.pi() * self.radius ** 2
-    
-    def cylinder_vol(self,height):
+        return self.pi() * self.radius**2
+
+    def cylinder_vol(self, height):
         return self.area * height
-
-    
-

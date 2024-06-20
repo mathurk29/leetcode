@@ -29,16 +29,13 @@ class Solution:
             k -= 1
 
         if j >= 0:
-            nums1[:j+1] = nums2[:j+1]
+            nums1[: j + 1] = nums2[: j + 1]
 
         print(f"nums1 is {nums1}")
 
 
 sol = Solution()
-sol.merge([2, 0],
-          1,
-          [1],
-          1)
+sol.merge([2, 0], 1, [1], 1)
 
 
 # refer for better sol  = https://leetcode.com/problems/merge-sorted-array/discuss/29503/Beautiful-Python-Solution

@@ -1,10 +1,15 @@
 # https://leetcode.com/problems/median-of-two-sorted-arrays/
 
+
 def medianSortedLists(A, B):
 
     l = len(A) + len(B)
 
-    return binarySearch(A, B, l // 2) if l % 2 == 1 else(binarySearch(A, B, (l // 2) - 1) + binarySearch(A, B, l // 2)) / 2
+    return (
+        binarySearch(A, B, l // 2)
+        if l % 2 == 1
+        else (binarySearch(A, B, (l // 2) - 1) + binarySearch(A, B, l // 2)) / 2
+    )
 
 
 def binarySearch(A, B, k):
@@ -20,11 +25,11 @@ def binarySearch(A, B, k):
     if middle_a + middle_b < k:
 
         if A[middle_a] > B[middle_b]:
-            return binarySearch(A, B[middle_b+1:], k - middle_b - 1)
+            return binarySearch(A, B[middle_b + 1 :], k - middle_b - 1)
 
         else:
 
-            return binarySearch(A[middle_a + 1:], B, k - middle_a - 1)
+            return binarySearch(A[middle_a + 1 :], B, k - middle_a - 1)
 
     else:
 

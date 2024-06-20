@@ -24,8 +24,6 @@ class Solution:
             if not (low <= node.val <= high):
                 return False
 
-            return (
-                recursive(node.left, low=low, high=node.val)
-                and
-                recursive(node.right, low=node.val, high=high)
+            return recursive(node.left, low=low, high=node.val) and recursive(
+                node.right, low=node.val, high=high
             )

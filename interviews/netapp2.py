@@ -3,10 +3,10 @@ arr = [1, 2, 3, 4, 5, 6, 7, 8, 0, -1, -2, -3, -4, -5, -6, -7]
 
 
 def peakElement(arr):
-    '''
-        returns the peak element of the array - first increasing -> later decreasing
+    """
+    returns the peak element of the array - first increasing -> later decreasing
 
-    '''
+    """
 
     if len(arr) < 3:
         return max(arr)
@@ -24,7 +24,7 @@ def peakElement(arr):
     # descending slope
     elif arr[mid - 1] > arr[mid] > arr[mid + 1]:
 
-        peakElement(arr[:mid+1])
+        peakElement(arr[: mid + 1])
 
 
 print(peakElement(arr))

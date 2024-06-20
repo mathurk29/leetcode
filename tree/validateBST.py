@@ -22,10 +22,8 @@ class Solution:
             if node.val <= low or node.val >= high:
                 return False
 
-            return (
-                recursive(node.left, low, node.val)
-                and
-                recursive(node.right, node.val, high)
+            return recursive(node.left, low, node.val) and recursive(
+                node.right, node.val, high
             )
 
         return recursive(root)

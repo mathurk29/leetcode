@@ -7,7 +7,7 @@ def factorial(n):
         if n == 0 or n == 1:
             return 1
         else:
-            return n * factorial(n-1)
+            return n * factorial(n - 1)
 
     except NameError:
         return "Exception caught: n is -ve"
@@ -45,6 +45,7 @@ stk.pop()
 def outer(fn):
     def inner(*args, **kwargs):
         return summation(*args, **kwargs)
+
     return inner
 
 

@@ -1,5 +1,6 @@
 # https: // www.geeksforgeeks.org/binary-search-tree-set-1-search-and-insertion/
 
+
 def search(root, key):
 
     # Base Cases: root is null or key is present at root

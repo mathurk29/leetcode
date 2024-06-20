@@ -1,5 +1,6 @@
 # classmethod
 
+
 class Pizza:
     def __init__(self, type, ingredients) -> None:
         self.type = type

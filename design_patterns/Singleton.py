@@ -1,4 +1,4 @@
-class Singleton():
+class Singleton:
 
     name = "kshitij"
 

@@ -11,10 +11,10 @@ class Solution:
                 left = max(left, d[s[right]] + 1)
 
             d[s[right]] = right
-            result = max(result, right-left+1)
+            result = max(result, right - left + 1)
 
         return result
 
 
 sol = Solution()
-print(sol.lengthOfLongestSubstring('pwwkew'))
+print(sol.lengthOfLongestSubstring("pwwkew"))

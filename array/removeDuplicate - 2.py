@@ -8,11 +8,12 @@ class Solution:
         hash = set()
         for i in range(len(nums)):
             if i > k:
-                hash.remove(nums[i-k-1])
+                hash.remove(nums[i - k - 1])
             if nums[i] in hash:
                 return True
             else:
                 hash.add(nums[i])
+
 
 # i - j <= k
 # i <= j + k

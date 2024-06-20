@@ -1,5 +1,5 @@
-
 # iterate the array with minimum moves. At an index i - you can either move to i+1 or some other index j such that a[i] == a[j]
+
 
 def minimum_jump(lst):
     cost = dict()

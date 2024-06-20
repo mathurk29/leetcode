@@ -20,7 +20,7 @@ def removeDuplicate(nums):
         right = nums[i + 1]
 
         if right != current:
-            #right is unique
+            # right is unique
             nums[k] = right
             k += 1
 

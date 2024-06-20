@@ -25,11 +25,11 @@ class Graph:
 
 # Example usage
 graph = Graph()
-graph.add_edge('A', 'B')
-graph.add_edge('A', 'C')
-graph.add_edge('B', 'D')
-graph.add_edge('B', 'E')
-graph.add_edge('C', 'F')
-graph.add_edge('E', 'G')
+graph.add_edge("A", "B")
+graph.add_edge("A", "C")
+graph.add_edge("B", "D")
+graph.add_edge("B", "E")
+graph.add_edge("C", "F")
+graph.add_edge("E", "G")
 
-graph.dfs('A')
+graph.dfs("A")

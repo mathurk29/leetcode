@@ -51,16 +51,16 @@ def getSunshine(num: List):
 
         # increase j untill the strictness is same as that of i and j.
         if isStrictIncreasing(num[i], num[j]):
-            while isStrictIncreasing(num[j], num[j+1]):
+            while isStrictIncreasing(num[j], num[j + 1]):
                 j += 1
 
         elif isStrictDecreasing(num[i], num[j]):
-            while isStrictDecreasing(num[j], num[j+1]):
+            while isStrictDecreasing(num[j], num[j + 1]):
                 j += 1
 
         # num = num[:i] + [sum(num[i:j+1])] + num[j+1:]
 
-        aux.extend([sum(num[i:j+1])])
+        aux.extend([sum(num[i : j + 1])])
 
         i = j + 1
 

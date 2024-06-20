@@ -2,6 +2,7 @@ import socket
 import threading
 import time
 
+
 class RateLimiter:
     def __init__(self, rate_limit, time_window):
         self.rate_limit = rate_limit
@@ -20,7 +21,9 @@ class RateLimiter:
             requests = self.client_requests[client_address]
 
             # Remove requests that are outside the time window
-            requests = [req for req in requests if req >= current_time - self.time_window]
+            requests = [
+                req for req in requests if req >= current_time - self.time_window
+            ]
 
             if len(requests) >= self.rate_limit:
                 # Reject the request if rate limit is exceeded
@@ -39,12 +42,13 @@ class RateLimiter:
 
         client_socket.close()
 
+
 # Example usage
 limiter = RateLimiter(rate_limit=10, time_window=60)  # Allow 10 requests per minute
 
 # Create a server socket
 server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-server_address = ('localhost', 8000)
+server_address = ("localhost", 8000)
 server_socket.bind(server_address)
 server_socket.listen(5)
 print("Server started")

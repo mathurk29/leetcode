@@ -16,7 +16,7 @@
 
 def checkType(array):
 
-    return 'A' if array[0] < array[1] else 'B'
+    return "A" if array[0] < array[1] else "B"
 
 
 def findPeak(array):
@@ -24,11 +24,14 @@ def findPeak(array):
     middle_idx = len(array) // 2
 
     # peak
-    if array[middle_idx-1] < array[middle_idx] and array[middle_idx] > array[middle_idx+1]:
+    if (
+        array[middle_idx - 1] < array[middle_idx]
+        and array[middle_idx] > array[middle_idx + 1]
+    ):
         return array[middle_idx]
 
     # peak on right side
-    if array[middle_idx-1] < array[middle_idx] < array[middle_idx+1]:
+    if array[middle_idx - 1] < array[middle_idx] < array[middle_idx + 1]:
         return findPeak(array[middle_idx:])
 
     else:
@@ -41,7 +44,7 @@ def findValley():
 
 def main(array):
 
-    return findPeak(array) if checkType(array) == 'A' else findValley(array)
+    return findPeak(array) if checkType(array) == "A" else findValley(array)
 
 
 main(array=[1, 12, 8, 6, 5, 3, 1])

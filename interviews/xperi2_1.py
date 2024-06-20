@@ -12,7 +12,7 @@ def isStrictDecreasing(a, b):
 
 def hasOrder(num):
     for i in len(num):
-        if isStrict(num[i], num[i+1]):
+        if isStrict(num[i], num[i + 1]):
             return True
     return False
 
@@ -26,7 +26,7 @@ def getSunshine(num):
 
         # ith loc do not have a window
 
-        while i + 1 < len(num) and not isStrict(num[i], num[i+1]):
+        while i + 1 < len(num) and not isStrict(num[i], num[i + 1]):
             i += 1
 
         # ith loc have a window

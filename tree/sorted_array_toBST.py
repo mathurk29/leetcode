@@ -3,12 +3,14 @@
 # Python code to convert a sorted array
 # to a balanced Binary Search Tree
 
+
 # binary tree node
 class Node:
     def __init__(self, d):
         self.data = d
         self.left = None
         self.right = None
+
 
 # function to convert sorted array to a
 # balanced BST
@@ -33,8 +35,9 @@ def sortedArrayToBST(arr):
 
     # right subtree of root has all
     # values >arr[mid]
-    root.right = sortedArrayToBST(arr[mid+1:])
+    root.right = sortedArrayToBST(arr[mid + 1 :])
     return root
+
 
 # A utility function to print the preorder
 # traversal of the BST

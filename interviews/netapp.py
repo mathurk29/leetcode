@@ -1,18 +1,12 @@
-
-
-matrix = [
-    [1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 9]
-]
+matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 
 # m * n
 
 
 def spiralTraversal(matrix):
-    '''
-        A func to traverse the arry spirally
-    '''
+    """
+    A func to traverse the arry spirally
+    """
     result = []
 
     # row
@@ -24,7 +18,7 @@ def spiralTraversal(matrix):
     # boundary = (row_boundary, col_boundary)
 
     left_boundary = [0, 0]
-    right_boundary = [m-1, n-1]  # 2,2
+    right_boundary = [m - 1, n - 1]  # 2,2
 
     while left_boundary != right_boundary:
 

@@ -5,8 +5,8 @@ def outer(fn):
 
     def inner(*_, **kwargs):
 
-        input = kwargs['input']
-        temp = ''
+        input = kwargs["input"]
+        temp = ""
         i = len(input) - 1
         while i >= 0:
             temp += input[i]
@@ -22,4 +22,4 @@ def test(input):
     return input
 
 
-test(input='Mathur')
+test(input="Mathur")

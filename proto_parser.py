@@ -3,21 +3,16 @@ import json
 from google.protobuf.json_format import MessageToJson
 
 
-d1 = new_pb2.Flat(
-    attr1=1,
-    attr2=2
-)
+d1 = new_pb2.Flat(attr1=1, attr2=2)
 
-d2 = new_pb2.Flat(
-    attr1=4,
-    attr2=5
-)
+d2 = new_pb2.Flat(attr1=4, attr2=5)
 
 
 rep_obj = new_pb2.Nested(
     rep=[d1, d2],
-    flatAttr=new_pb2.NestedL1(nestedField= 6),
+    flatAttr=new_pb2.NestedL1(nestedField=6),
 )
+
 
 def get_proto_field(proto_obj, field_path, default=None):
     """
@@ -41,9 +36,16 @@ def get_proto_field(proto_obj, field_path, default=None):
             return default
     return result
 
+
 assert get_proto_field(rep_obj, "rep.0.attr1") == 1
 assert get_proto_field(rep_obj, "rep.1.attr2") == 5
 assert get_proto_field(rep_obj, "flatAttr.nestedField") == 6
-assert get_proto_field(rep_obj, "rep.2.attr2") == None # index out of bound on rep field
-assert get_proto_field(rep_obj, "flatAttr.wrongField") == None # wrong field on nested proto
-assert get_proto_field(rep_obj, "rep.2.attr2", "custom_default") == "custom_default" # error with custom default
+assert (
+    get_proto_field(rep_obj, "rep.2.attr2") == None
+)  # index out of bound on rep field
+assert (
+    get_proto_field(rep_obj, "flatAttr.wrongField") == None
+)  # wrong field on nested proto
+assert (
+    get_proto_field(rep_obj, "rep.2.attr2", "custom_default") == "custom_default"
+)  # error with custom default

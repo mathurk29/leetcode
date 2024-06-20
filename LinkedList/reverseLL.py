@@ -14,7 +14,7 @@ class Solution:
         previous = None
         current = head
 
-        while(current):
+        while current:
 
             # save the next node loc as we are going to replace it's entry from current.next the with the prev node
             nextNode = current.next

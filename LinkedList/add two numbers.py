@@ -1,5 +1,3 @@
-
-
 # https://leetcode.com/problems/add-two-numbers/
 
 from typing import Optional
@@ -19,7 +17,7 @@ class Solution:
         pass
 
 
-''' Commenting my code as it is wrong '''
+""" Commenting my code as it is wrong """
 
 # def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
 
@@ -85,18 +83,30 @@ class Solution:
             if l2:
                 v2 = l2.val
                 l2 = l2.next
-            carry, val = divmod(v1+v2+carry, 10)
+            carry, val = divmod(v1 + v2 + carry, 10)
             n.next = ListNode(val)  # Important
             n = n.next
-        return root.next        # Important trick for LL!
+        return root.next  # Important trick for LL!
 
 
 # Driver code
 sol = Solution()
 
-L1 = ListNode(9, ListNode(9, ListNode(
-    9, ListNode(9, ListNode(9, ListNode(9, ListNode(9)))))))
+L1 = ListNode(
+    9, ListNode(9, ListNode(9, ListNode(9, ListNode(9, ListNode(9, ListNode(9))))))
+)
 
-L2 = ListNode(9, ListNode(9, ListNode(9, ListNode(9,))))
+L2 = ListNode(
+    9,
+    ListNode(
+        9,
+        ListNode(
+            9,
+            ListNode(
+                9,
+            ),
+        ),
+    ),
+)
 
 sol.addTwoNumbers(l1=L1, l2=L2)

@@ -7,7 +7,7 @@ class Solution:
         try:
             for i, row in enumerate(grid):
                 for j, col in enumerate(row):
-                    if (i == j or i + j == len(grid) - 1):  # diagonal element
+                    if i == j or i + j == len(grid) - 1:  # diagonal element
                         if col == 0:
                             raise StopIteration
                     else:  # non - diagonal elem

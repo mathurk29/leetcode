@@ -11,7 +11,7 @@ def hammingAlgo(binary_number):
 
 
 def solution(A, B):
-    return hammingAlgo(A*B)
+    return hammingAlgo(A * B)
 
 
 solution(3, 7)

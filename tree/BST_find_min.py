@@ -9,7 +9,7 @@ def minValueNode(node):
     current = node
 
     # loop down to find the leftmost leaf
-    while(current.left is not None):
+    while current.left is not None:
         current = current.left
 
     return current

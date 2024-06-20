@@ -1,4 +1,3 @@
-
 # Python program to demonstrate
 # insert operation in binary search tree
 
@@ -11,6 +10,7 @@ class Node:
         self.left = None
         self.right = None
         self.val = key
+
 
 # A utility function to insert
 # a new node with the given key

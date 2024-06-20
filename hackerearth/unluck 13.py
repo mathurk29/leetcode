@@ -47,7 +47,9 @@ mod = 1000000009
 
 
 def ans(n):
-    if n < 25000:  # by trial and eror to tackle memory exceed problem we are splitting cache at 25k
+    if (
+        n < 25000
+    ):  # by trial and eror to tackle memory exceed problem we are splitting cache at 25k
         if n in cache:
             return cache[n]
 
@@ -58,14 +60,14 @@ def ans(n):
             cache[n] = 10
             return cache[n]
 
-        temp1 = ans(n//2)     # Split in half.
+        temp1 = ans(n // 2)  # Split in half.
         # Split in half to find the number of times 13 appears in the middle.
-        temp2 = ans(n//2-1)
+        temp2 = ans(n // 2 - 1)
 
         if (n % 2) == 0:
-            cache[n] = (temp1*temp1 - temp2*temp2) % mod
+            cache[n] = (temp1 * temp1 - temp2 * temp2) % mod
         else:
-            temp3 = ans(n//2 + 1)
+            temp3 = ans(n // 2 + 1)
             cache[n] = (temp1 * (temp3 - temp2)) % mod
 
         return cache[n]

@@ -28,7 +28,7 @@ def deleteNode(root, key):
     # If the kye to be delete
     # is greater than the root's key
     # then it lies in right subtree
-    elif(key > root.key):
+    elif key > root.key:
         root.right = deleteNode(root.right, key)
 
     # If key is same as root's key, then this is the node

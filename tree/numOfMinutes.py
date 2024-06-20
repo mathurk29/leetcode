@@ -1,5 +1,6 @@
 # https://leetcode.com/problems/time-needed-to-inform-all-employees/
 
+
 def numOfMinutes(n, headID, manager, informTime):
     children = [[] for i in range(n)]
     for i, m in enumerate(manager):
@@ -8,6 +9,7 @@ def numOfMinutes(n, headID, manager, informTime):
 
     def dfs(i):
         return max([dfs(j) for j in children[i]] or [0]) + informTime[i]
+
     return dfs(headID)
 
 

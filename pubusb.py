@@ -19,13 +19,17 @@ subscriber = pubsub_v1.SubscriberClient()
 
 # Create a subscription
 subscription_path = subscriber.subscription_path("<project-id>", "<subscription-name>")
-subscription = subscriber.create_subscription(request={"name": subscription_path, "topic": topic_path})
+subscription = subscriber.create_subscription(
+    request={"name": subscription_path, "topic": topic_path}
+)
 print(f"Subscription created: {subscription.name}")
+
 
 # Define a callback function to handle received messages
 def callback(message):
     print(f"Received message: {message.data.decode('utf-8')}")
     message.ack()
+
 
 # Start the subscriber
 subscriber.subscribe(subscription_path, callback=callback)
@@ -33,4 +37,3 @@ subscriber.subscribe(subscription_path, callback=callback)
 # Keep the script running to continuously receive messages
 while True:
     pass
-

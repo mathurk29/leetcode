@@ -1,12 +1,13 @@
 # you can write to stdout for debugging purposes, e.g.
 # print("this is a debug message")
 
+
 def solution(S, C):
-    '''
+    """
     :type S: string
     :type C: List
     :rtype: int
-    '''
+    """
 
     # no identical letters
     if len(S) == len(set(S)):
@@ -25,11 +26,11 @@ def solution(S, C):
             continue
 
         # move j to right most letter identical to S[i]
-        while j < len(S) - 1 and S[j+1] == S[i]:
+        while j < len(S) - 1 and S[j + 1] == S[i]:
             j += 1
 
         # i to j is now the window of letters identical to S[i] - skip the highest cost
-        cost += sum(C[i:j+1]) - max(C[i:j+1])
+        cost += sum(C[i : j + 1]) - max(C[i : j + 1])
 
         i = j + 1
 
@@ -39,4 +40,4 @@ def solution(S, C):
 # solution('abccbd', [0,1,2,3, 4, 5])
 # solution('aabbcc', [1,2,1,2,1,2])
 # solution('aaaa', [3, 4, 5, 6])
-solution('ababa', [10, 5, 10, 5, 10])
+solution("ababa", [10, 5, 10, 5, 10])

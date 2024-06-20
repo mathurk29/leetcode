@@ -1,9 +1,10 @@
 # create your own custom range function
 
+
 def my_range(start, stop=None, step=1):
-    '''
-      mimic inbuilt range func
-    '''
+    """
+    mimic inbuilt range func
+    """
 
     if stop == None:
         stop = start
@@ -13,7 +14,7 @@ def my_range(start, stop=None, step=1):
 
     i = start
 
-    while (i < stop):
+    while i < stop:
         yield i
         i += step
 

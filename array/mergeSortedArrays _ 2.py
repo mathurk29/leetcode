@@ -1,5 +1,3 @@
-
-
 # Bad complexity O(mn)
 
 
@@ -28,8 +26,7 @@ class Solution:
         merged.extend(nums1[i:])
 
         if (m + n) % 2 == 0:
-            median = (merged[(m + n - 1) // 2] +
-                      merged[(m + n - 1) // 2 + 1]) / 2
+            median = (merged[(m + n - 1) // 2] + merged[(m + n - 1) // 2 + 1]) / 2
         else:
             median = merged[(m + n) // 2]
 

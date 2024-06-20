@@ -1,5 +1,6 @@
 # https: // leetcode.com/problems/maximum-twin-sum-of-a-linked-list/discuss/1680417/C % 2B % 2B-Python-mid-and-reverse-solution
 
+
 def sumTwinElements(head):
 
     # debug = head
