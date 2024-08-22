@@ -13,15 +13,17 @@ class Solution:
 
         if nums[0] > nums[1]:
             return 0
-        if nums[n-1] > nums[n-2]: # n-1 is last element stupid - not n.
+        if nums[n - 1] > nums[n - 2]:  # n-1 is last element stupid - not n.
             return n
 
         # search remaining array now
         left_pointer = 1
         right_pointer = n - 2
 
-        while left_pointer <= right_pointer: # use <= in binary search
-            mid_pointer = (left_pointer + right_pointer) // 2 # calculate mid_pointer inside while
+        while left_pointer <= right_pointer:  # use <= in binary search
+            mid_pointer = (
+                left_pointer + right_pointer
+            ) // 2  # calculate mid_pointer inside while
             if self.isPeak(nums, mid_pointer, n):
                 return mid_pointer
             if nums[mid_pointer] < nums[mid_pointer + 1]:
@@ -37,8 +39,13 @@ class Solution:
         # if location == n-1:
         #     return nums[location - 1] < nums[location]
         return (
-            nums[location - 1] < nums[location] and nums[location + 1] < nums[location] # middle element has to be greater than neigbor - NOT _ < _ < _
+            nums[location - 1] < nums[location]
+            and nums[location + 1]
+            < nums[
+                location
+            ]  # middle element has to be greater than neigbor - NOT _ < _ < _
         )
+
 
 sol = Solution()
 # assert sol.findPeakElement([1, 2, 3, 1]) == 2
