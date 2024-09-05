@@ -27,3 +27,18 @@ class Solution:
 
         dfs(root, root.val)
         return result
+
+
+# changed func call - added default param
+# 1 + True = 2 i.e. int(True) = 1
+
+
+class Solution2:
+    def goodNodes(self, r: TreeNode, ma=-10000) -> int:
+        return (
+            self.goodNodes(r.left, max(ma, r.val))
+            + self.goodNodes(r.right, max(ma, r.val))
+            + (r.val >= ma)
+            if r
+            else 0
+        )
