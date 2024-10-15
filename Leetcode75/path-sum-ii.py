@@ -15,7 +15,9 @@ class Solution:
         result = []
 
         def dfs(node, path_so_far):
-            if (not node.left and not node.right) and sum(path_so_far) == targetSum:
+            if (not node.left and not node.right) and sum(
+                path_so_far
+            ) == targetSum:
                 result.append(path_so_far)
             if node.left:
                 dfs(

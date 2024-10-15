@@ -20,6 +20,8 @@ class Solution:
             cumulative_sum += node.val
             if not node.left and not node.right:
                 return cumulative_sum == targetSum
-            return dfs(node.left, cumulative_sum) or dfs(node.right, cumulative_sum)
+            return dfs(node.left, cumulative_sum) or dfs(
+                node.right, cumulative_sum
+            )
 
         return dfs(root, 0)

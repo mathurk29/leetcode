@@ -47,5 +47,6 @@ assert (
     get_proto_field(rep_obj, "flatAttr.wrongField") == None
 )  # wrong field on nested proto
 assert (
-    get_proto_field(rep_obj, "rep.2.attr2", "custom_default") == "custom_default"
+    get_proto_field(rep_obj, "rep.2.attr2", "custom_default")
+    == "custom_default"
 )  # error with custom default

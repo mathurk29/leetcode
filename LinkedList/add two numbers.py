@@ -93,7 +93,10 @@ class Solution:
 sol = Solution()
 
 L1 = ListNode(
-    9, ListNode(9, ListNode(9, ListNode(9, ListNode(9, ListNode(9, ListNode(9))))))
+    9,
+    ListNode(
+        9, ListNode(9, ListNode(9, ListNode(9, ListNode(9, ListNode(9)))))
+    ),
 )
 
 L2 = ListNode(

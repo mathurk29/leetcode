@@ -22,7 +22,9 @@ class RateLimiter:
 
             # Remove requests that are outside the time window
             requests = [
-                req for req in requests if req >= current_time - self.time_window
+                req
+                for req in requests
+                if req >= current_time - self.time_window
             ]
 
             if len(requests) >= self.rate_limit:
@@ -44,7 +46,9 @@ class RateLimiter:
 
 
 # Example usage
-limiter = RateLimiter(rate_limit=10, time_window=60)  # Allow 10 requests per minute
+limiter = RateLimiter(
+    rate_limit=10, time_window=60
+)  # Allow 10 requests per minute
 
 # Create a server socket
 server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -57,4 +61,6 @@ print("Server started")
 while True:
     client_socket, client_address = server_socket.accept()
     print(f"Accepted connection from {client_address}")
-    threading.Thread(target=limiter.handle_request, args=(client_socket,)).start()
+    threading.Thread(
+        target=limiter.handle_request, args=(client_socket,)
+    ).start()

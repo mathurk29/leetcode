@@ -11,7 +11,12 @@ class Solution:
         curr = 1
         while curr + 1 < len(flowerbed):
             # print(n, flowerbed, curr)
-            if flowerbed[curr - 1] == flowerbed[curr] == flowerbed[curr + 1] == 0:
+            if (
+                flowerbed[curr - 1]
+                == flowerbed[curr]
+                == flowerbed[curr + 1]
+                == 0
+            ):
                 flowerbed[curr] = 1
                 n -= 1
                 if n == 0:

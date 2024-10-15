@@ -11,7 +11,9 @@ class TreeNode:
 
 
 class Solution:
-    def leafSimilar(self, root1: Optional[TreeNode], root2: Optional[TreeNode]) -> bool:
+    def leafSimilar(
+        self, root1: Optional[TreeNode], root2: Optional[TreeNode]
+    ) -> bool:
         def dfs(root):
             if not root:
                 return []

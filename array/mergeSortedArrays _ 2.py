@@ -5,7 +5,9 @@ from typing import List
 
 
 class Solution:
-    def findMedianSortedArrays(self, nums1: List[int], nums2: List[int]) -> float:
+    def findMedianSortedArrays(
+        self, nums1: List[int], nums2: List[int]
+    ) -> float:
 
         merged = []
 
@@ -26,7 +28,9 @@ class Solution:
         merged.extend(nums1[i:])
 
         if (m + n) % 2 == 0:
-            median = (merged[(m + n - 1) // 2] + merged[(m + n - 1) // 2 + 1]) / 2
+            median = (
+                merged[(m + n - 1) // 2] + merged[(m + n - 1) // 2 + 1]
+            ) / 2
         else:
             median = merged[(m + n) // 2]
 

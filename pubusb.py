@@ -18,7 +18,9 @@ print(f"Published message: {message}")
 subscriber = pubsub_v1.SubscriberClient()
 
 # Create a subscription
-subscription_path = subscriber.subscription_path("<project-id>", "<subscription-name>")
+subscription_path = subscriber.subscription_path(
+    "<project-id>", "<subscription-name>"
+)
 subscription = subscriber.create_subscription(
     request={"name": subscription_path, "topic": topic_path}
 )

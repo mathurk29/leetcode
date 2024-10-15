@@ -18,7 +18,9 @@ class Solution:
                 j += 1
             # j is at first non-one number.
             left_window = j + 1
-            if j + 1 < length and nums[j + 1] == 1:  # 1's are avl after next number
+            if (
+                j + 1 < length and nums[j + 1] == 1
+            ):  # 1's are avl after next number
                 j += 1
                 while j + 1 < length and nums[j + 1] == 1:
                     j += 1
