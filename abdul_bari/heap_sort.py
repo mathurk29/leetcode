@@ -1,60 +1,62 @@
-# Python program for implementation of heap Sort
-
-# To heapify a subtree rooted with node i
-# which is an index in arr[].
+# python implementation for heap sort
 
 
-def heapify(arr, n, parent_node):
-    # Initialize largest as root
-    largest_node = parent_node
+def heapify(arr, parent, length):
+    """heapify subtree at node i \n
+    nodes values are populated downwards \n
+    Complexity: O(n) \n
+    """
 
-    #  left index = 2*i + 1
-    left_child = 2 * parent_node + 1
+    # initialize parent node having largest value
+    largest_node_index = parent
+    left_child_index = 2 * parent + 1
+    right_child_index = 2 * parent + 2
 
-    #  right index = 2*i + 2
-    right_child = 2 * parent_node + 2
+    # find node with largest value
+    if left_child_index < length and left_child_index > largest_node_index:
+        largest_node_index = left_child_index
+    if right_child_index < length and right_child_index > largest_node_index:
+        largest_node_index = right_child_index
 
-    # If left child exits and is larger than parent
-    if left_child < n and arr[largest_node] < arr[left_child]:
-        largest_node = left_child
-
-    # If right child exits and is larger than largest so far
-    if right_child < n and arr[largest_node] < arr[right_child]:
-        largest_node = right_child
-
-    # If parent is not largest
-    if largest_node != parent_node:
-        # swap value of parent-child
-        arr[parent_node], arr[largest_node] = (
-            arr[largest_node],
-            arr[parent_node],
+    # propagate largest value to parent
+    if largest_node_index != parent:
+        # now parent has largest value
+        arr[largest_node_index], arr[parent] = (
+            arr[parent],
+            arr[largest_node_index],
         )
-        # Recursively heapify the affected sub-tree i.e. the child now has smaller value of parent so that subtree at this child node might no longer maintain heap property.
-        heapify(arr, n, largest_node)
+
+        # subtree at largest_node_index now may fail max heap prop due to propagation of lower value to it - heapify it
+        heapify(arr, largest_node_index, length)
 
 
-def heapSort(arr):
+def heap_sort(arr):
     n = len(arr)
 
-    # loop through non-leaf elements and heapify subtrees rooted at them.
-    for i in range(n // 2 - 1, -1, -1):
-        heapify(arr, n, i)
+    # we have an array - let's believe it is a representation of complete binary tree
+    # to make it max heap we have to heapify it
 
-    for i in range(n - 1, 0, -1):
-        arr[i], arr[0] = arr[0], arr[i]
+    # let's start from right to left from bottom to up
+    # realise - leaf nodes are max heap in itself !!
+    # so start with non-leaf nodes right to left
+    # adjust them downwards (heapify) https://youtu.be/HqPJF2L5h9U?list=PLDN4rrl48XKpZkf03iYFl-O29szjTrs_O&t=2661
+
+    for i in range(n // 2 - 1, -1, -1):
+        heapify(arr, i, n)
+
+    # follow delete element from heap to get sorted array
+    # only root element can be deleted
+    # swapping it with most bottom-right element to maintain CBT property
+    # heapify the root node from root to downwards
+
+    for i in range(n - 1, -1, -1):
+        # swap the root element with last element of array (effectively shrinking heap size by 1)
+        arr[0], arr[i] = arr[i], arr[0]
         heapify(arr, i, 0)
 
 
 # Example usage:
 # arr = [12, 11, 13, 5, 6, 7]
 arr = [10, 20, 15, 30, 40]
-heapSort(arr)
+heap_sort(arr)
 print("Sorted array is:", arr)
-
-
-# n = 6
-# i = 2
-#   largest =  2
-#   left = 5
-#   right = 6
-#
