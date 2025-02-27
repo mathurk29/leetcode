@@ -38,3 +38,8 @@ Suppose you are working on an algorithm to find the maximum value in a list:
   - Very large list: Check for performance or overflow issues.
   
 By actively and methodically considering these factors, you can substantially improve your handling of edge cases. With practice, identifying and addressing edge cases becomes a natural part of your problem-solving approach in data structures and algorithms.
+
+### Python name conventions:
+module_name, package_name, ClassName, method_name, ExceptionName, function_name, GLOBAL_CONSTANT_NAME, global_var_name, instance_var_name, function_parameter_name, local_var_name.
+
+
